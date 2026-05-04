@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.devtools
+    image: xnu-devtools:local
+    container_name: xnu-devtools
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    tty: true
+    stdin_open: true
+    command: bash
+
+  qemu-kernel:
+    build:
+      context: .
+      dockerfile: docker/qemu/Dockerfile
+    image: xnu-qemu:local
+    container_name: xnu-qemu-kernel
+    environment:
+      ISO_PATH: /vm/iso/kernel.iso
+      RAM_MB: "4096"
+      CPUS: "4"
+    volumes:
+      - ./docker/iso:/vm/iso:ro
+    tty: true
+    stdin_open: true
