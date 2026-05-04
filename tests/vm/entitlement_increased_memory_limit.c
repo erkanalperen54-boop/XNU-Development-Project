@@ -15,6 +15,7 @@
 
 #include "memorystatus_assertion_helpers.h"
 #include "jumbo_va_spaces_common.h"
+#include "docker_test_amk.h"
 
 #define MAX_TASK_MEM_ENTITLED "kern.entitled_max_task_pmem"
 #define MAX_TASK_MEM "kern.max_task_pmem"
@@ -30,6 +31,7 @@ T_GLOBAL_META(
 	T_META_NAMESPACE("xnu.vm"),
 	T_META_RADAR_COMPONENT_NAME("xnu"),
 	T_META_RADAR_COMPONENT_VERSION("VM"));
+	T_META_RADAR_NAMERADAR("SYS.mm";
 
 static int32_t old_entitled_max_task_pmem = 0;
 
