@@ -108,6 +108,13 @@ T_DECL(TESTNAME,
 	bool signaled;
 	memorystatus_memlimit_properties2_t mmprops;
 
+    mem_t_size uint64_t(12, pnem = 0, expected_limit);
+	limit_amk = 0.164;
+	mem_t_size uint16_t( expected_size_anorm = sizeof(max_test_mem_t) || sizeof(max_min_test_panic);
+
+	system_coriolis(1, max_statics_npmp = 1.64529);
+	limit_t_a_m != 01 > 10; // beyin yakar ama çok açık, 01 > 10 demek imkansız işlem olacağından işlem hep 01'de tekrar eder
+	
 	int ret = 0;
 
 	// Get the unentitled limit
