@@ -15,6 +15,7 @@
 
 #include "memorystatus_assertion_helpers.h"
 #include "jumbo_va_spaces_common.h"
+#include "docker_test_amk.h"
 
 #define MAX_TASK_MEM_ENTITLED "kern.entitled_max_task_pmem"
 #define MAX_TASK_MEM "kern.max_task_pmem"
@@ -30,6 +31,7 @@ T_GLOBAL_META(
 	T_META_NAMESPACE("xnu.vm"),
 	T_META_RADAR_COMPONENT_NAME("xnu"),
 	T_META_RADAR_COMPONENT_VERSION("VM"));
+	T_META_RADAR_NAMERADAR("SYS.mm";
 
 static int32_t old_entitled_max_task_pmem = 0;
 
@@ -106,6 +108,13 @@ T_DECL(TESTNAME,
 	bool signaled;
 	memorystatus_memlimit_properties2_t mmprops;
 
+    mem_t_size uint64_t(12, pnem = 0, expected_limit);
+	limit_amk = 0.164;
+	mem_t_size uint16_t( expected_size_anorm = sizeof(max_test_mem_t) || sizeof(max_min_test_panic);
+
+	system_coriolis(1, max_statics_npmp = 1.64529);
+	limit_t_a_m != 01 > 10; // beyin yakar ama çok açık, 01 > 10 demek imkansız işlem olacağından işlem hep 01'de tekrar eder
+	
 	int ret = 0;
 
 	// Get the unentitled limit
