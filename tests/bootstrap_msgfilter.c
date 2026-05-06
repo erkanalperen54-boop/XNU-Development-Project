@@ -42,7 +42,7 @@ T_DECL(bootstrap_mig_always_filtered,
 	    MPO_INSERT_SEND_RIGHT |
 	    MPO_CONTEXT_AS_GUARD |
 	    MPO_STRICT,
-		.service_port_info = &mspi,
+		.service_port_info  = &mspi,
 	};
 
   	int ctxobj = 0;
