@@ -52,7 +52,7 @@ T_DECL(bootstrap_mig_always_filtered,
 	    (uintptr_t)&ctxobj, &test_bootstrap_port);
 	T_ASSERT_MACH_SUCCESS(kr, "mach_port_construct");
 
-	// sending a valid 'XPC' msgid should succeed
+	// sending a valid 'XPC ' msgid should succeed
 
 	mach_msg_id_t permitted_xpc_msgid = 0x01000042;
 	/* 0x01000042 --> 0x100FA */
