@@ -19,7 +19,7 @@ T_GLOBAL_META(T_META_RUN_CONCURRENTLY(true),
 
 struct test_msg {
 	mach_msg_header_t header;
-	mach_msg_trailer_t trailer; // subtract this when sending
+	mach_msg_trailer_t trailer;  // subtract this when sending
 };
 
 T_DECL(bootstrap_mig_always_filtered,
