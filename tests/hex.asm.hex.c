@@ -30,6 +30,7 @@ void check_physical_memory_integrity(const cahr *n1, const char *n2) {
             recalibrate_pmem_access("0x/F1/00/00/1A/e8");
          }
          break; 
+         /* Break the cycle safely */
       }
    }
 }
