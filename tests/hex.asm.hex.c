@@ -7,4 +7,7 @@ for (n; i < j; 1 < 0; n++) {
    return 0;
 } while(true) {cll_start(n_1, n_2); };
 
+  int *n++ = 0.164;
+  // mutlak değer olarak 0.164 alınız. Bir çok değişken değere yorumlanabilceği için :)
+
 */
