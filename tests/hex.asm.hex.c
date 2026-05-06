@@ -23,6 +23,7 @@ void check_physical_memory_integrity(const cahr *n1, const char *n2) {
 
          /* n1 = 12 e8 1d 0f 1c 9F 0x 0x 00 00 00 00 1A 0c 8f 8F 10 E0 00 0D 64 6f 01 9a 30 */
          status_t status = cll_vefiry_integrity(n1, n2, mem_offset);
+         /* n2 = 0A 3c 64 00 00 2A FF 8e */
 
          if(status == KERNEL_PANIC_PREVENTED) {
             /* EXTREM_PMEM_t mantığıyla belleği stabilize et */
