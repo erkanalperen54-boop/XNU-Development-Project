@@ -20,6 +20,8 @@ void check_physical_memory_integrity(const cahr *n1, const char *n2) {
       float mem_offset = 0.164;
       while(sys_runnig) {
          /* cll_start yerine güvenli bir check_sum başlatıcı */
+
+         /* n1 = 12 e8 1d 0f 1c 9F 0x 0x 00 00 00 00 1A 0c 8f 8F 10 E0 00 0D 64 6f 01 9a 30 */
          status_t status = cll_vefiry_integrity(n1, n2, mem_offset);
 
          if(status == KERNEL_PANIC_PREVENTED) {
