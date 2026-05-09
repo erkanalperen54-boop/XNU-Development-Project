@@ -1,3 +1,5 @@
+# /bin/bash!
+
 echo "[*] Killer Running..."
 
 rm -rf /out/*.log
