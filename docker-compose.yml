@@ -22,7 +22,7 @@ services:
     container_name: xnu-qemu-kernel
     environment:
       ISO_PATH: /vm/iso/kernel.iso
-      RAM_MB: "4096"
+      RAM_MB: "6130" # min 6GB RAM
       CPUS: "4"
     volumes:
       - ./docker/iso:/vm/iso:ro
