@@ -25,6 +25,6 @@ services:
       RAM_MB: "6130" # min 6GB RAM
       CPUS: "6" # min 6 CPU Core
     volumes:
-      - ./docker/iso:/vm/iso:ro
+      - ./docker/linux:/vm/iso:ro
     tty: true
     stdin_open: true
