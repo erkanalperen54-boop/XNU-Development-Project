@@ -1,3 +1,4 @@
+```
 STUX6 TECHNOLOGY® - OFFICIAL DECLARATION
 
 PROJECT NAME: Darwin XNU Modernization (XNU-Development-Project)
@@ -63,3 +64,5 @@ For official inquiries, technical documentation requests, or Stux6 internal comm
     Phone (Direct Line): +90 551 981 48 49
 
     Official Web: www.alpenerkan.com
+
+```
