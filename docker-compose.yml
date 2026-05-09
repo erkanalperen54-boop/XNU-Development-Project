@@ -12,7 +12,7 @@ services:
       - ./:/workspace
     tty: true
     stdin_open: true
-    command: bash
+    command: bash # macOS to Zshell
 
   qemu-kernel:
     build:
