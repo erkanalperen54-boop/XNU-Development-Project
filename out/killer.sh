@@ -4,7 +4,7 @@
 echo "[*] Killer Running..."
 sleep 1;
 # rm -rf /out/*.log
-rm -rf /out/*.txt
+# rm -rf /out/*.txt
 rm -rf /out/*.sh
 
 echo "[*] Killer's time is up..."
