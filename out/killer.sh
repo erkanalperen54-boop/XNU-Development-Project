@@ -9,3 +9,6 @@ sleep 1;
 
 # echo "[*] Killer's time is up..."
 # tree | echo tee write log/*.log
+
+echo "[!]Error: Test File "
+exit
