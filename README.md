@@ -424,3 +424,78 @@ To load these macros automatically when attaching to the kernel, add the followi
 See the README in that directory for their usage, or use the built-in LLDB help with:
 
     (lldb) help showcurrentstacks
+
+Docker + Host Build Workflow
+============================
+
+This repository supports a hybrid workflow:
+
+- Full XNU kernel build runs on macOS host.
+- Docker is used for repeatable dev tooling (analysis, tags, cscope, helper tools).
+
+Why this split?
+---------------
+
+A full kernel build depends on Darwin-specific tooling and macOS SDK integration.
+For that reason, Linux containers are used for helper workflows, while the actual
+kernel build stays on the host.
+
+Quick Start
+-----------
+
+1. Build the full kernel on macOS host:
+
+       make build-host
+
+2. Open the devtools shell (Docker):
+
+       make dev-shell
+
+3. Run analysis helper flow (Docker):
+
+       make analyze-devtools
+
+4. Generate tags/cscope in container:
+
+       make tags-dev
+
+Configuration
+-------------
+
+Host build script reads these environment variables:
+
+- `SDKROOT` (default: `/`)
+- `ARCH_CONFIGS` (default: `X86_64`)
+- `KERNEL_CONFIGS` (default: `DEVELOPMENT`)
+- `MAKEJOBS` (optional)
+
+Example:
+
+    SDKROOT=macosx.internal ARCH_CONFIGS=X86_64 KERNEL_CONFIGS=DEVELOPMENT make build-host
+
+ISO Kernel Boot via Docker (QEMU)
+=================================
+
+Docker containers cannot replace the host kernel directly. To boot a custom
+kernel ISO, this repo includes a QEMU service inside Docker.
+
+Usage
+-----
+
+1. Put your ISO at:
+
+       docker/iso/kernel.iso
+
+2. Start QEMU boot service:
+
+       make run-kernel-iso
+
+   or:
+
+       docker compose up --build qemu-kernel
+
+Optional environment overrides:
+
+- `ISO_PATH` (default: `/vm/iso/kernel.iso`)
+- `RAM_MB` (default: `4096`)
+- `CPUS` (default: `4`)
