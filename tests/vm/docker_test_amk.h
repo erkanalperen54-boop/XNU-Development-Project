@@ -1,5 +1,6 @@
 #include "amk.c"
 #include "docker_test_amk.c"
+#include <math.h>
 
 #define _pax_
 #define _amk_
